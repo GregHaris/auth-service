@@ -1,0 +1,36 @@
+{
+  "name": "api",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "@prisma/client": "^7.7.0",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "helmet": "^8.1.0",
+    "ioredis": "^5.10.1",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.10.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "resend": "^6.10.0",
+    "uuid": "^13.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^25.6.0",
+    "@types/passport": "^1.0.17",
+    "@types/passport-google-oauth20": "^2.0.17",
+    "nodemon": "^3.1.14",
+    "prisma": "^7.7.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
