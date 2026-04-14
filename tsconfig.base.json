@@ -6,20 +6,6 @@
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "incremental": true,
-    "baseUrl": ".",
-    "paths": {
-      "@packages/*": ["packages/*"]
-    }
-  },
-  "include": [
-    "modules/**/*.ts",
-    "lib/**/*.ts",
-    "types/**/*.ts",
-    "types/**/*.d.ts",
-    "index.ts",
-    "apps/api/**/*.ts",
-    "apps/web/**/*.tsx"
-  ]
+    "resolveJsonModule": true
+  }
 }
