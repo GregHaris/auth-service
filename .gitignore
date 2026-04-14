@@ -44,6 +44,7 @@ next-env.d.ts
 # -------------------------
 prisma/migrations/dev.db
 prisma/migrations/dev.db-journal
+/generated/prisma
 
 # -------------------------
 # Misc
