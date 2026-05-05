@@ -30,10 +30,6 @@ type AsyncController = (req: Request, res: Response, next: NextFunction) => Prom
 
 export const asyncHandler = (fn: AsyncController) => {
   return (req: Request, res: Response, next: NextFunction): void => {
-    // Execute the controller and catch any error it throws
-    // — whether it's an ApiError you threw intentionally
-    // — or an unexpected runtime error
-    // Either way, it lands in the global error handler
     fn(req, res, next).catch(next);
   };
 };
