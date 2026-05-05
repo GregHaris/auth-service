@@ -17,14 +17,14 @@ const envSchema = z.object({
   ACCESS_TOKEN_EXPIRES_IN: z.string().default('15m'),
   REFRESH_TOKEN_EXPIRES_IN: z.string().default('7d'),
 
-  // Google OAuth
-  GOOGLE_CLIENT_ID: z.string(),
-  GOOGLE_CLIENT_SECRET: z.string(),
-  GOOGLE_CALLBACK_URL: z.url(),
+  // // Google OAuth
+  // GOOGLE_CLIENT_ID: z.string(),
+  // GOOGLE_CLIENT_SECRET: z.string(),
+  // GOOGLE_CALLBACK_URL: z.url(),
 
-  // Resend
-  RESEND_API_KEY: z.string(),
-  EMAIL_FROM: z.email(),
+  // // Resend
+  // RESEND_API_KEY: z.string(),
+  // EMAIL_FROM: z.email(),
 
   // Frontend
   CLIENT_URL: z.url(),
