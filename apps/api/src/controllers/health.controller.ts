@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
-import { prisma } from '../config/db';
-import { redis } from '../config/redis';
+import { prisma } from '@/config/db';
+import { redis } from '@/config/redis';
 
 /**
  * GET /health

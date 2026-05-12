@@ -1,8 +1,8 @@
 import jwt, { SignOptions } from 'jsonwebtoken';
 import { v4 as uuidv4 } from 'uuid';
-import { redis } from '../config/redis';
-import { env } from '../config/env';
-import { ApiError } from '../utils/ApiError';
+import { redis } from '@/config/redis';
+import { env } from '@/config/env';
+import { ApiError } from '@/utils/ApiError';
 
 export interface AccessTokenPayload {
   userId: string;

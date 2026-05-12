@@ -10,6 +10,7 @@ import { prisma } from './config/db';
 import { redis } from './config/redis';
 
 import healthRoutes from './routes/health.routes';
+import authRoutes from './routes/auth.route';
 import { errorHandler } from './middleware/errorHandler';
 
 const app = express();
@@ -48,13 +49,9 @@ app.use(cookieParser());
 // REQUIRED for reading your httpOnly refresh token cookie
 
 // ── Routes ───────────────────────────────────────────
-// The string here is the mount point — it prefixes all routes
-// in that router. So router.get("/") becomes GET /health
 app.use('/health', healthRoutes);
+app.use('/auth', authRoutes);
 
-// ── 404 Handler ──────────────────────────────────────
-// If no route matched, return a clean 404
-// This must come AFTER all routes
 app.use((_req, res) => {
   res.status(404).json({
     status: 'error',
@@ -64,15 +61,12 @@ app.use((_req, res) => {
 
 app.use(errorHandler);
 
-// ── Startup ───────────────────────────────────────────
 async function start() {
   try {
     await prisma.$connect();
     console.log('✅ Database connected');
 
     await redis.connect();
-    // redis.connect() only works with lazyConnect: true
-    // Without lazyConnect, the connection happens automatically on import
 
     app.listen(env.PORT, () => {
       console.log(`✅ Server running → http://localhost:${env.PORT}`);
